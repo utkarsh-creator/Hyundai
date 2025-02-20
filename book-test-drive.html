@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Test Drive | Hyundai</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <a href="index.html">
+                <img src="logo.png" alt="Hyundai Logo" class="logo">
+            </a>
+            <nav>
+                <ul>
+                    <!-- <li><a href="find-car.html">Find a Car</a></li>
+                    <li><a href="buy.html">Click to Buy</a></li>
+                    <li><a href="service.html">Connect to Service</a></li>
+                    <li><a href="story.html">Hyundai Story</a></li>
+                    <li><a href="mobility.html">Mobility Solutions</a></li> -->
+                    <!-- <li><a href="investor.html">Investor Relations</a></li> -->
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="form-section">
+        <h1>Book a Test Drive</h1>
+        <p>Experience the thrill of Hyundai. Book your test drive today!</p>
+        
+        <form action="submit-form.php" method="POST">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="car-model">Select Car Model</label>
+            <select id="car-model" name="car-model" required>
+                <option value="Hyundai IONIQ 5">Hyundai IONIQ 5</option>
+                <option value="Hyundai Creta">Hyundai Creta</option>
+                <option value="Hyundai Verna">Hyundai Verna</option>
+                <option value="Hyundai Tucson">Hyundai Tucson</option>
+            </select>
+
+            <label for="date">Preferred Date</label>
+            <input type="date" id="date" name="date" required>
+
+            <button type="submit">Book Test Drive</button>
+        </form>
+    </section>
+
+</body>
+</html>
