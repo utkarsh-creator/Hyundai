@@ -326,3 +326,118 @@ form button:hover {
         font-size: 1em;
     }
 }
+
+/* CALCULAGTOR CSS */
+/* Popup Calculator */
+/* Floating Calculator Icon */
+.calculator-icon {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    background: rgb(255, 255, 255);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.calculator-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.calculator-icon:hover {
+    transform: scale(1.1);
+    background: #f0f0f0;
+}
+
+/* Popup Calculator */
+/* Popup Calculator */
+/* Popup Calculator */
+.calculator-popup {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    z-index: 1000;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Slide-in animation */
+.calculator-popup.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Slide-out animation */
+.calculator-popup.hide {
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.calculator-header {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2em;
+    animation: slideOut 0.3s ease-in-out;
+
+}
+
+.calculator-body {
+    display: flex;
+    flex-direction: column;
+}
+
+#calc-display {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+    text-align: right;
+    background: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.calc-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+.calc-buttons button {
+    padding: 10px;
+    background: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.calc-buttons button:hover {
+    background: #666;
+}
+
