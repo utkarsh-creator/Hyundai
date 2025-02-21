@@ -14,9 +14,6 @@
                 <img src="logo.png" alt="Hyundai Logo" class="logo">
             </a>
 
-            <div class="hamburger" onclick="toggleMenu()">
-                ☰
-            </div>
 
             <nav class="nav-menu">
                 <ul class="menu">
@@ -48,7 +45,22 @@
             </div>
         </div>
     </section>
-
+    <script>
+        const images = ["coverimg.PNG", "car2.jpg", "car3.jpg"];
+        let currentIndex = 0;
+        
+        function changeBackground() {
+            document.querySelector(".hero-section").style.backgroundImage = `url('${images[currentIndex]}')`;
+            currentIndex = (currentIndex + 1) % images.length;
+        }
+    
+        // Initial background set
+        changeBackground();
+    
+        // Change background every 3 seconds
+        setInterval(changeBackground, 3000);
+    </script>
+    
     <script src="script.js"></script>
 
 </body>

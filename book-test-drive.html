@@ -27,7 +27,7 @@
         </div>
     </header>
 
-    <section class="form-section">
+    <section id="form-section" class="form-section">
         <h1>Book a Test Drive</h1>
         <p>Experience the thrill of Hyundai. Book your test drive today!</p>
         
@@ -54,7 +54,15 @@
 
             <button type="submit">Book Test Drive</button>
         </form>
+
     </section>
+    <script>
+        document.querySelector("form").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+            alert("Form submitted successfully!");
+            this.reset()
+        });
+    </script>
     <script src="script.js"></script>
 
 </body>
