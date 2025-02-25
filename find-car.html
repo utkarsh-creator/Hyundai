@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Click to Buy</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Find a Car</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <style>
         body { 
             font-family: 'Poppins', sans-serif; 
@@ -15,31 +15,21 @@
         }
         header { 
             background: linear-gradient(135deg, #00b4d8, #004b87); 
-            padding: 0px; 
-            
+            padding: 20px; 
             text-align: center; 
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
         }
-        header h1 { font-size: 2.5rem;  }
-        .content { text-align: center; padding: 50px; margin-top: 10vh;}
-        .button {
-            margin-top: 2vh; 
-            background-color: #00b4d8; 
-            color: white; 
-            padding: 15px 30px; 
-            border-radius: 50px; 
-            font-size: 1.2rem; 
-            cursor: pointer; 
-            border: none; 
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-        .button:hover { 
-            background-color: #004b87; 
-            transform: scale(1.05); 
-        }
+        header h1 { font-size: 2.5rem; }
+        .content { padding: 40px; text-align: center; margin-top: 10vh;}
+        .car-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 30px; }
+        .car-list li { background: #333; border-radius: 10px; padding: 20px; transition: transform 0.3s ease; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); }
+        .car-list li:hover { transform: scale(1.05); }
+        .car-list li p { font-size: 1.2rem; font-weight: 600; margin-top: 15px; }
+        @media (max-width: 768px) { header h1 { font-size: 2rem; } }
     </style>
 </head>
 <body>
+
     <header>
         <div class="navbar">
             <a href="index.html">
@@ -66,8 +56,13 @@
         </div>
     </header>
     <div class="content">
-        <p>Click the button below to proceed with your purchase:</p>
-        <button class="button" onclick="alert('Proceeding with your purchase!')">Buy Now</button>
+        <p>Browse our selection of high-performance vehicles:</p>
+        <ul class="car-list">
+            <li><p>Hyundai Sonata</p></li>
+            <li><p>Hyundai Elantra</p></li>
+            <li><p>Hyundai Tucson</p></li>
+            <li><p>Hyundai Santa Fe</p></li>
+        </ul>
     </div>
     <script src="script.js"></script>
 </body>

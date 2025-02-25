@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Click to Buy</title>
     <link rel="stylesheet" href="style.css">
+    <title>Investor Relations</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body { 
@@ -15,28 +15,15 @@
         }
         header { 
             background: linear-gradient(135deg, #00b4d8, #004b87); 
-            padding: 0px; 
-            
+            padding: 20px; 
             text-align: center; 
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
         }
-        header h1 { font-size: 2.5rem;  }
-        .content { text-align: center; padding: 50px; margin-top: 10vh;}
-        .button {
-            margin-top: 2vh; 
-            background-color: #00b4d8; 
-            color: white; 
-            padding: 15px 30px; 
-            border-radius: 50px; 
-            font-size: 1.2rem; 
-            cursor: pointer; 
-            border: none; 
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-        .button:hover { 
-            background-color: #004b87; 
-            transform: scale(1.05); 
-        }
+        header h1 { font-size: 2.5rem; }
+        .content { padding: 40px; margin-top: 5vh;}
+        h2 { font-size: 2rem; color: #00b4d8; }
+        p { font-size: 1.1rem; line-height: 1.8; margin-top: 3vh; }
+        @media (max-width: 768px) { header h1 { font-size: 2rem; } }
     </style>
 </head>
 <body>
@@ -66,8 +53,8 @@
         </div>
     </header>
     <div class="content">
-        <p>Click the button below to proceed with your purchase:</p>
-        <button class="button" onclick="alert('Proceeding with your purchase!')">Buy Now</button>
+        <h2>Our Commitment to Shareholders</h2>
+        <p>Hyundai is dedicated to delivering long-term value to our investors. Learn more about our financial performance, strategic initiatives, and our future roadmap for continued growth.</p>
     </div>
     <script src="script.js"></script>
 </body>
