@@ -1,70 +1,35 @@
-let currentIndex = 0;
-const slides = document.querySelectorAll('.slide');
-const totalSlides = slides.length;
-
-function showSlide(index) {
-    if (index >= totalSlides) {
-        currentIndex = 0;
-    } else if (index < 0) {
-        currentIndex = totalSlides - 1;
-    } else {
-        currentIndex = index;
-    }
-
-    slides.forEach((slide, i) => {
-        slide.style.display = i === currentIndex ? 'block' : 'none';
-    });
-}
-
-function nextSlide() {
-    showSlide(currentIndex + 1);
-}
-
-function prevSlide() {
-    showSlide(currentIndex - 1);
-}
-
-// Initialize slider
-showSlide(currentIndex);
-function toggleMenu() {
-    var menu = document.querySelector(".nav-menu");
-    menu.classList.toggle("active");
-}
-
-
-//Calculator
-
+// Toggle Calculator visibility
 function toggleCalculator() {
     const calculator = document.getElementById("calculator-popup");
 
     if (calculator.classList.contains("show")) {
-      
         calculator.classList.remove("show");
         calculator.classList.add("hide");
 
         setTimeout(() => {
             calculator.style.display = "none";
-        }, 300); 
+        }, 300); // Ensure hiding after animation
     } else {
-        
-        calculator.style.display = "flex";
+        calculator.style.display = "flex"; // Show the calculator
 
         setTimeout(() => {
             calculator.classList.remove("hide");
-            calculator.classList.add("show");
-        }, 10);
+            calculator.classList.add("show"); // Add the show class after the display is set to flex
+        }, 10); // Ensure smooth animation
     }
 }
 
-
+// Append the clicked value to the display
 function appendCalcInput(value) {
     document.getElementById("calc-display").value += value;
 }
 
+// Clear the calculator display
 function clearCalc() {
     document.getElementById("calc-display").value = "";
 }
 
+// Calculate the result
 function calculateResult() {
     try {
         let expression = document.getElementById("calc-display").value;
@@ -75,6 +40,7 @@ function calculateResult() {
     }
 }
 
+// Tokenize the expression (split into numbers and operators)
 function tokenize(expression) {
     let tokens = [];
     let num = "";
@@ -87,11 +53,12 @@ function tokenize(expression) {
             tokens.push(char);
         }
     }
-    
+
     if (num) tokens.push(num);
     return tokens;
 }
 
+// Convert infix to postfix notation
 function infixToPostfix(tokens) {
     let output = [], operators = [];
     let precedence = { "+": 1, "-": 1, "*": 2, "/": 2 };
@@ -110,6 +77,7 @@ function infixToPostfix(tokens) {
     return output.concat(operators.reverse());
 }
 
+// Evaluate the postfix expression
 function evaluatePostfix(postfix) {
     let stack = [];
 
@@ -128,6 +96,7 @@ function evaluatePostfix(postfix) {
     return stack[0];
 }
 
+// Evaluate the mathematical expression
 function evaluateExpression(expression) {
     let tokens = tokenize(expression);
     let postfix = infixToPostfix(tokens);

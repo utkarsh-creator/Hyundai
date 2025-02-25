@@ -13,16 +13,8 @@
             <a href="index.html">
                 <img src="logo.png" alt="Hyundai Logo" class="logo">
             </a>
-
-
             <nav class="nav-menu">
                 <ul class="menu">
-                    <!-- <li><a href="find-car.html">Find a Car</a></li>
-                    <li><a href="buy.html">Click to Buy</a></li>
-                    <li><a href="service.html">Connect to Service</a></li>
-                    <li><a href="story.html">Hyundai Story</a></li>
-                    <li><a href="mobility.html">Mobility Solutions</a></li>
-                    <li><a href="investor.html">Investor Relations</a></li> -->
                     <li><a href="contact.html">Contact Us</a></li>
                     <li><a href="book-test-drive.html">Book Test Drive</a></li>
                 </ul>
@@ -45,57 +37,58 @@
             </div>
         </div>
     </section>
+
     <script>
         const images = ["coverimg.PNG", "car2.jpg", "car3.jpg"];
         let currentIndex = 0;
-        
+
         function changeBackground() {
             document.querySelector(".hero-section").style.backgroundImage = `url('${images[currentIndex]}')`;
             currentIndex = (currentIndex + 1) % images.length;
         }
-    
+
         // Initial background set
         changeBackground();
-    
+
         // Change background every 3 seconds
         setInterval(changeBackground, 3000);
     </script>
-    
+
     <script src="script.js"></script>
 
-</body>
+    <!-- Floating Calculator Icon -->
+    <button class="calculator-icon" onclick="toggleCalculator()">
+        <img src="Capture.PNG" alt="Calculator">
+    </button>
 
-<!-- Floating Calculator Icon -->
-<button class="calculator-icon" onclick="toggleCalculator()">
-    <img src="Capture.PNG" alt="Calculator">
-</button>
-
-<!-- Popup Calculator -->
-<div id="calculator-popup" class="calculator-popup">
-    <div class="calculator-header">
-        <span>Calculator</span>
-        <button class="close-btn" onclick="toggleCalculator()">X</button>
-    </div>
-    <div class="calculator-body">
-        <input type="text" id="calc-display" disabled>
-        <div class="calc-buttons">
-            <button onclick="appendCalcInput('7')">7</button>
-            <button onclick="appendCalcInput('8')">8</button>
-            <button onclick="appendCalcInput('9')">9</button>
-            <button onclick="appendCalcInput('/')">/</button>
-            <button onclick="appendCalcInput('4')">4</button>
-            <button onclick="appendCalcInput('5')">5</button>
-            <button onclick="appendCalcInput('6')">6</button>
-            <button onclick="appendCalcInput('*')">*</button>
-            <button onclick="appendCalcInput('1')">1</button>
-            <button onclick="appendCalcInput('2')">2</button>
-            <button onclick="appendCalcInput('3')">3</button>
-            <button onclick="appendCalcInput('-')">-</button>
-            <button onclick="appendCalcInput('0')">0</button>
-            <button onclick="appendCalcInput('.')">.</button>
-            <button onclick="clearCalc()">C</button>
-            <button onclick="calculateResult()">=</button>
-            <button onclick="appendCalcInput('+')">+</button>
+    <!-- Popup Calculator -->
+    <div id="calculator-popup" class="calculator-popup hide">
+        <div class="calculator-header">
+            <span>Calculator</span>
+            <button class="close-btn" onclick="toggleCalculator()">X</button>
+        </div>
+        <div class="calculator-body">
+            <input type="text" id="calc-display" disabled>
+            <div class="calc-buttons">
+                <button onclick="appendCalcInput('7')">7</button>
+                <button onclick="appendCalcInput('8')">8</button>
+                <button onclick="appendCalcInput('9')">9</button>
+                <button onclick="appendCalcInput('/')">/</button>
+                <button onclick="appendCalcInput('4')">4</button>
+                <button onclick="appendCalcInput('5')">5</button>
+                <button onclick="appendCalcInput('6')">6</button>
+                <button onclick="appendCalcInput('*')">*</button>
+                <button onclick="appendCalcInput('1')">1</button>
+                <button onclick="appendCalcInput('2')">2</button>
+                <button onclick="appendCalcInput('3')">3</button>
+                <button onclick="appendCalcInput('-')">-</button>
+                <button onclick="appendCalcInput('0')">0</button>
+                <button onclick="appendCalcInput('.')">.</button>
+                <button onclick="clearCalc()">C</button>
+                <button onclick="calculateResult()">=</button>
+                <button onclick="appendCalcInput('+')">+</button>
+            </div>
         </div>
     </div>
-</div>
+</body>
+</html>
