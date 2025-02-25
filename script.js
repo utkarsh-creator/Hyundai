@@ -19,6 +19,12 @@ function toggleCalculator() {
     }
 }
 
+function toggleMenu() {
+    const menu = document.querySelector('.nav-menu');
+    menu.classList.toggle('active');
+}
+
+
 // Append the clicked value to the display
 function appendCalcInput(value) {
     document.getElementById("calc-display").value += value;

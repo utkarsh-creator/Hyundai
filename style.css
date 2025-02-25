@@ -50,6 +50,24 @@
     color: #00c3ff;
 }
 
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.nav-menu {
+    display: flex;
+}
+
+.nav-menu ul {
+    display: flex;
+    gap: 20px;
+}
+
+
 /* Hero Section with Background Image */
 .hero-section {
     position: relative;
@@ -246,38 +264,78 @@ form button:hover {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-    .overlay {
+    .nav-menu {
+        display: none;
         width: 100%;
-        padding: 40px;
     }
-    
-    .text-container h1 {
-        font-size: 2.2em;
+    .nav-menu.active {
+        display: block;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 60px; /* Adjust based on navbar height */
+        left: 0;
+        padding: 20px;
+        text-align: center;
     }
 
-    .text-container p {
-        font-size: 1.1em;
+    .nav-menu.active ul {
+        flex-direction: column;
+    }
+
+    .nav-menu.active ul li {
+        padding: 15px 0;
+    }
+
+
+    
+    .menu-icon {
+        display: block;
     }
 
     .form-section {
-        max-width: 90%;
-        padding: 25px;
-        margin: 15vh;
+        max-width: 95%;
+        padding: 20px;
+        margin: 15vh 2vh 0 2vh;
+        
     }
 
 }
 
 @media (max-width: 768px) {
 
-    .menu-icon {
+    /* .menu-icon {
         display: flex;
         font-size: 30px;
         color: white;
         cursor: pointer;
         margin-right: -80%;
        
+    } */
+    .nav-menu {
+        display: none;
+        width: 100%;
     }
-    
+    .nav-menu.active {
+        display: block;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 60px; /* Adjust based on navbar height */
+        left: 0;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .nav-menu.active ul {
+        flex-direction: column;
+    }
+
+    .nav-menu.active ul li {
+        padding: 15px 0;
+    }
+
+
     
     .menu-icon {
         display: block;
